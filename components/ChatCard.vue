@@ -1,6 +1,6 @@
 <template>
     <div class="flex h-20 py-3 w-full">
-        <img src="img/user0.jpg" alt="user" class="w-14 h-14 rounded-full" />
+        <img src="/img/user0.jpg" alt="user" class="object-contain w-14 rounded-full" />
         <div class="flex-auto ml-4">
             <div class="flex justify-between">
                 <h2>{{ user }}</h2>

@@ -1,36 +1,47 @@
 <template>
   <main class="flex fixed top-0 bottom-0 left-0 right-0">
-    <div class="w-3/6 flex">
+    <div class="hidden lg:w-3/6 lg:flex">
       <!-- eslint-disable-next-line vue/no-v-html -->
       <div class="block m-auto" v-html="signInImg" />
     </div>
-    <div>
-      <div class="w-90 mt-44">
+    <div class="w-full lg:w-auto">
+      <div
+        class="flex flex-col w-full justify-center items-center lg:w-90 lg:mt-44 lg:flex-none lg:justify-start lg:items-start"
+      >
+        <!--"w-90 mt-44" -->
         <!-- eslint-disable-next-line vue/no-v-html -->
         <div class="mb-6" v-html="chattereeLogo" />
-        <h1 class="text-4xl mb-4 font-sans">
+        <!-- eslint-disable-next-line vue/no-v-html -->
+        <div class="object-contain mx-6 w-80 flex lg:hidden" v-html="ImgSmall" />
+        <h1 class="text-base text-center mb-2 font-bold font-sans lg:text-4xl lg:text-left">
           Howdy chatter! Your
           <span class="block">peeps are waiting</span>
         </h1>
         <p class="mb-10">
-          <small class="text-greyDark">Enter your email address to start chatting.</small>
+          <small
+            class="hidden lg:block lg:text-greyDark"
+          >Enter your email address to start chatting.</small>
         </p>
         <div class="w-90 mb-6">
-          <label for="email" class="block text-greyDark mb-1">Email address</label>
-          <input type="email" class="outline-none border-none bg-grey rounded-3xl h-12 w-full px-6" />
+          <label for="email" class="hidden lg:block lg:text-greyDark lg:mb-1">Email address</label>
+          <input
+            type="email"
+            class="outline-none border-none bg-grey rounded-3xl h-12 w-full px-6"
+            placeholder="Email address"
+          />
+          <div class="my-6 flex flex-row-reverse">
+            <NuxtLink to="/verify">
+              <button class="rounded-3xl bg-black text-yellow-300 px-4 py-2">Next</button>
+            </NuxtLink>
+          </div>
+          <hr class="hidden lg:block" />
+          <button
+            class="rounded-3xl border border-gray-50 py-2 flex w-full justify-center items-center mt-6"
+          >
+            <!-- eslint-disable-next-line vue/no-v-html -->
+            <div class="mr-2" v-html="googleIcon" />Continue with Google
+          </button>
         </div>
-        <div class="mb-6 flex flex-row-reverse">
-          <NuxtLink to="/verify">
-            <button class="rounded-3xl bg-black text-yellow-300 px-4 py-2">Next</button>
-          </NuxtLink>
-        </div>
-        <hr />
-        <button
-          class="rounded-3xl border border-gray-50 py-2 flex w-full justify-center items-center mt-6"
-        >
-          <!-- eslint-disable-next-line vue/no-v-html -->
-          <div class="mr-2" v-html="googleIcon" />Continue with Google
-        </button>
       </div>
     </div>
   </main>
@@ -41,10 +52,11 @@
 import googleIcon from "@/assets/svg/google-icon.svg?raw";
 import chattereeLogo from "@/assets/svg/chatteree-logo.svg?raw";
 import signInImg from "@/assets/svg/chatteree-signin-img.svg?raw";
+import ImgSmall from "@/assets/svg/img.svg?raw";
 
 export default {
   data() {
-    return { googleIcon, chattereeLogo, signInImg };
+    return { googleIcon, chattereeLogo, signInImg, ImgSmall };
   },
 };
 </script>

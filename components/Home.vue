@@ -1,11 +1,13 @@
 <template>
   <main class="flex fixed top-0 bottom-0 left-0 right-0">
     <div class="w-3/6 flex">
-      <img src="@/assets/svg/chatteree-signin-img.svg" alt="sign in" class="block m-auto" />
+      <!-- eslint-disable-next-line vue/no-v-html -->
+      <div class="block m-auto" v-html="signInImg" />
     </div>
     <div>
       <div class="w-90 mt-44">
-        <img src="@/assets/svg/chatteree-logo.svg" alt="logo" class="mb-6" />
+        <!-- eslint-disable-next-line vue/no-v-html -->
+        <div class="mb-6" v-html="chattereeLogo" />
         <h1 class="text-4xl mb-4 font-sans">
           Howdy chatter! Your
           <span class="block">peeps are waiting</span>
@@ -26,10 +28,23 @@
         <button
           class="rounded-3xl border border-gray-50 py-2 flex w-full justify-center items-center mt-6"
         >
-          <img src="@/assets/svg/google-icon.svg" alt="google icon" class="mr-2" />
-          Continue with Google
+          <!-- eslint-disable-next-line vue/no-v-html -->
+          <div class="mr-2" v-html="googleIcon" />Continue with Google
         </button>
       </div>
     </div>
   </main>
 </template>
+
+
+<script>
+import googleIcon from "@/assets/svg/google-icon.svg?raw";
+import chattereeLogo from "@/assets/svg/chatteree-logo.svg?raw";
+import signInImg from "@/assets/svg/chatteree-signin-img.svg?raw";
+
+export default {
+  data() {
+    return { googleIcon, chattereeLogo, signInImg };
+  },
+};
+</script>

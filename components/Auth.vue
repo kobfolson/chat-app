@@ -1,7 +1,8 @@
 <template>
     <main class="fixed top-0 bottom-0 left-0 right-0">
         <NuxtLink to="/signin">
-            <img src="@/assets/svg/ellipse.svg" alt="ellipse" class="fixed top-24 left-36" />
+            <!-- eslint-disable-next-line vue/no-v-html -->
+            <div class="fixed top-24 left-36" v-html="ellipseImg" />
         </NuxtLink>
         <div class="mx-auto w-96 mt-28">
             <img src="@/assets/svg/chatteree-logo.svg" alt="logo" class="mb-6" />
@@ -49,7 +50,20 @@
                     <button class="rounded-3xl bg-black text-yellow-300 px-6 py-2">Verify</button>
                 </NuxtLink>
             </div>
-            <img src="@/assets/svg/illust.svg" alt="illust" />
+            <!-- eslint-disable-next-line vue/no-v-html -->
+            <div v-html="illustImg" />
         </div>
     </main>
 </template>
+
+<script>
+import illustImg from "@/assets/svg/illust.svg?raw";
+import ellipseImg from "@/assets/svg/ellipse.svg?raw";
+import chattereeLogo from "@/assets/svg/chatteree-logo.svg?raw";
+
+export default {
+    data() {
+        return { illustImg, ellipseImg, chattereeLogo }
+    }
+}
+</script>

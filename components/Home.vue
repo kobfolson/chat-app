@@ -30,7 +30,7 @@
           />
           <div class="hidden lg:my-6 lg:flex lg:flex-row-reverse">
             <NuxtLink to="/verify">
-              <button class="hiddenrounded-3xl bg-black text-yellow-300 px-4 py-2">Next</button>
+              <button class="rounded-3xl bg-black text-yellow-300 px-4 py-2">Next</button>
             </NuxtLink>
           </div>
           <hr class="hidden lg:block" />

@@ -8,11 +8,10 @@
       <div
         class="flex flex-col w-full justify-center items-center lg:w-90 lg:mt-44 lg:flex-none lg:justify-start lg:items-start"
       >
-        <!--"w-90 mt-44" -->
         <!-- eslint-disable-next-line vue/no-v-html -->
         <div class="mb-6" v-html="chattereeLogo" />
         <!-- eslint-disable-next-line vue/no-v-html -->
-        <div class="object-contain mx-6 w-80 flex lg:hidden" v-html="ImgSmall" />
+        <div class="object-contain mx-6 w-80 flex lg:hidden" v-html="signInImg" />
         <h1 class="text-base text-center mb-2 font-bold font-sans lg:text-4xl lg:text-left">
           Howdy chatter! Your
           <span class="block">peeps are waiting</span>
@@ -29,9 +28,9 @@
             class="outline-none border-none bg-grey rounded-3xl h-12 w-full px-6"
             placeholder="Email address"
           />
-          <div class="my-6 flex flex-row-reverse">
+          <div class="hidden lg:my-6 lg:flex lg:flex-row-reverse">
             <NuxtLink to="/verify">
-              <button class="rounded-3xl bg-black text-yellow-300 px-4 py-2">Next</button>
+              <button class="hiddenrounded-3xl bg-black text-yellow-300 px-4 py-2">Next</button>
             </NuxtLink>
           </div>
           <hr class="hidden lg:block" />
@@ -52,11 +51,10 @@
 import googleIcon from "@/assets/svg/google-icon.svg?raw";
 import chattereeLogo from "@/assets/svg/chatteree-logo.svg?raw";
 import signInImg from "@/assets/svg/chatteree-signin-img.svg?raw";
-import ImgSmall from "@/assets/svg/img.svg?raw";
 
 export default {
   data() {
-    return { googleIcon, chattereeLogo, signInImg, ImgSmall };
+    return { googleIcon, chattereeLogo, signInImg };
   },
 };
 </script>

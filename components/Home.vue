@@ -2,7 +2,7 @@
   <main class="flex fixed top-0 bottom-0 left-0 right-0">
     <div class="hidden lg:w-3/6 lg:flex">
       <!-- eslint-disable-next-line vue/no-v-html -->
-      <div class="block m-auto" v-html="signInImg" />
+      <div class="block m-auto" v-html="signInAlpha" />
     </div>
     <div class="w-full lg:w-auto">
       <div
@@ -11,7 +11,7 @@
         <!-- eslint-disable-next-line vue/no-v-html -->
         <div class="mb-6" v-html="chattereeLogo" />
         <!-- eslint-disable-next-line vue/no-v-html -->
-        <div class="object-contain mx-6 w-80 flex lg:hidden" v-html="signInImg" />
+        <div class="object-contain mx-6 w-80 flex lg:hidden" v-html="signInBeta" />
         <h1 class="text-base text-center mb-2 font-bold font-sans lg:text-4xl lg:text-left">
           Howdy chatter! Your
           <span class="block">peeps are waiting</span>
@@ -50,11 +50,12 @@
 <script>
 import googleIcon from "@/assets/svg/google-icon.svg?raw";
 import chattereeLogo from "@/assets/svg/chatteree-logo.svg?raw";
-import signInImg from "@/assets/svg/chatteree-signin-img.svg?raw";
+import signInAlpha from "@/assets/svg/chatteree-signin-alpha.svg?raw";
+import signInBeta from "@/assets/svg/chatteree-signin-beta.svg?raw";
 
 export default {
   data() {
-    return { googleIcon, chattereeLogo, signInImg };
+    return { googleIcon, chattereeLogo, signInAlpha, signInBeta };
   },
 };
 </script>

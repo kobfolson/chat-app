@@ -1,10 +1,10 @@
 <template>
   <main class="flex fixed top-0 bottom-0 left-0 right-0">
-    <div class="hidden lg:w-3/6 lg:flex">
+    <div class="hidden lg:w-3/6 lg:flex lg:justify-center lg:items-center">
       <!-- eslint-disable-next-line vue/no-v-html -->
-      <div class="block m-auto" v-html="signInAlpha" />
+      <div class="w-90 flex" v-html="signInAlpha" />
     </div>
-    <div class="w-full lg:w-auto">
+    <div class="w-full lg:w-auto m-2">
       <div
         class="flex flex-col w-full justify-center items-center lg:w-90 lg:mt-44 lg:flex-none lg:justify-start lg:items-start"
       >

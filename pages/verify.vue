@@ -7,6 +7,7 @@
         <div
             class="flex flex-col justify-center items-center mt-10 md:mx-auto md:w-96 md:mt-24 md:block"
         >
+            <NotificationBanner />
             <img src="@/assets/svg/chatteree-logo.svg" alt="logo" class="mb-6" />
             <h1 class="mb-4 text-4xl font-sans">
                 <strong>Check your mail</strong>
